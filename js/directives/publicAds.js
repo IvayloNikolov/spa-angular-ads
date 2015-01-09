@@ -1,7 +1,8 @@
 adsApp.directive('publicAds', function(){
     return {
         restrict: 'E',
-        template: 'e'
+        templateUrl: 'partials/publicAds.html',
+        controller: 'publicAdsCtrl'
     }
 
 })

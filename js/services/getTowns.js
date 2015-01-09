@@ -5,7 +5,7 @@ adsApp.factory('townsData', ['$resource', function($resource){
         return resource.query();
     };
     return{
-        getTowns: getAllTowns()
+        getTowns: getAllTowns
     }
 
 }])

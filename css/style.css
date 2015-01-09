@@ -2,10 +2,22 @@ body
 {
     background: #E2F0D9;
 }
-#content
+.content
 {
     width:95%;
     margin-left:2.5%;
     background-color: #aaa;
     height:700px;
+}
+.ad
+{
+    background-color:#afc4a1;
+    margin-bottom: 10px;
+    padding-left:20px;
+    border: 2px solid #507e32;
+    border-radius: 2px;
+}
+.title
+{
+    font-size: 20px;
 }

@@ -5,9 +5,15 @@ adsApp.factory('signing', ['$resource', function($resource){
     function loginUser(user){
         return $resource('http://localhost:1337/api/user/login').save(user);
     }
+    function authenticate(data)
+    {
+        localStorage.setItem('access_token', data.access_token);
+        localStorage.setItem('username', data.username);
+    }
     return{
         register: registerUser,
-        login: loginUser
+        login: loginUser,
+        authenticate: authenticate
     }
 
 }])

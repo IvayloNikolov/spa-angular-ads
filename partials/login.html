@@ -1,6 +1,13 @@
-<form>
-    <input type="username">
-    <br />
-    <input type="password">
-    <button ng-click="login()">Submit</button>
-</form>
+<div id="login">
+    <form>
+        {{page}}
+        <br />
+        <a href="#register">register</a>
+        <a href="/">home</a>
+        <br />
+        <input type="username" ng-model="user.username">
+        <br />
+        <input type="password" ng-model="user.password">
+        <button ng-click="login(user)">Submit</button>
+    </form>
+</div>

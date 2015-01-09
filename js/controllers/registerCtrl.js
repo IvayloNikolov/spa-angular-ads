@@ -1,10 +1,9 @@
-adsApp.controller('registerCtrl', ['$scope', 'townsData', 'signing', function($scope, townsData, signing){
+adsApp.controller('registerCtrl', ['$scope', 'townsData', 'signing', '$location', function($scope, townsData, signing, $location){
     townsData.getTowns
         .$promise
         .then(function(data)
         {
             $scope.towns = data;
-            console.log(data);
         });
 
     $scope.register = function(user)
@@ -13,7 +12,12 @@ adsApp.controller('registerCtrl', ['$scope', 'townsData', 'signing', function($s
             .$promise
             .then(function(data)
             {
-                console.log(data)
+                console.log(data);
+                signing.authenticate(data)
+                $location.path('/');
+
             })
     }
+    $scope.page = 'register'
+
 }])

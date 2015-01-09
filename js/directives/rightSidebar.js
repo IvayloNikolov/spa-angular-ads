@@ -3,5 +3,4 @@ adsApp.directive('rightSidebar', function(){
         restrict: 'E',
         template: 'right'
     }
-
 })

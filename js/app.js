@@ -7,7 +7,7 @@ adsApp.config(['$routeProvider', function($routeProvider) {
         templateUrl: "partials/home.html",
         controller:  'homeCtrl',
         replace: true
-    });
+    })
     $routeProvider.when('/login', {
         templateUrl: "partials/login.html",
         controller: 'loginCtrl',
@@ -18,5 +18,4 @@ adsApp.config(['$routeProvider', function($routeProvider) {
         controller: 'registerCtrl',
         replace: true
     })
-
 }])

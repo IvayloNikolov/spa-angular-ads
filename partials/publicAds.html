@@ -1,0 +1,18 @@
+<div ng-repeat="ad in ads" class="ad">
+        <br />
+        <div class="title">{{ad.title}}</div>
+        <div clas="info">
+        {{ad.text}}
+        </div>
+        <img data-ng-src={{ad.imageDataUrl}}>
+        <div class=owner-name">
+        {{ad.ownerName}}
+        </div>
+        <div class="ownerPhone">
+        {{ad.ownerPhone}}
+        </div>
+        <div class="townId">
+        {{ad.townId}}
+        </div>
+        <br />
+</div>
