@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="angular.js" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$USER_HOME$/Desktop/Ads-Exam-SoftUni/bower_components/angular-resource/angular-resource.js" />
+        <item url="file://$USER_HOME$/Desktop/Ads-Exam-SoftUni/bower_components/angular/angular.js" />
+        <item url="file://$USER_HOME$/Desktop/Ads-Exam-SoftUni/bower_components/angular-route/angular-route.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$USER_HOME$/Desktop/Ads-Exam-SoftUni/bower_components/angular-resource/angular-resource.js" />
+      <root url="file://$USER_HOME$/Desktop/Ads-Exam-SoftUni/bower_components/angular/angular.js" />
+      <root url="file://$USER_HOME$/Desktop/Ads-Exam-SoftUni/bower_components/angular-route/angular-route.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
