@@ -18,4 +18,14 @@ adsApp.config(['$routeProvider', function($routeProvider) {
         controller: 'registerCtrl',
         replace: true
     })
+    $routeProvider.when('/myAds',{
+        templateUrl:"partials/myAds.html",
+        controller: 'PrivateAdsCtrl',
+        replace: true
+    })
+    $routeProvider.when('/postAd',{
+        templateUrl:"partials/postAd.html",
+        controller: 'PostAdCtrl',
+        replace: true
+    })
 }])

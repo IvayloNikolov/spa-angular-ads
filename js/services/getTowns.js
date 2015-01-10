@@ -7,5 +7,4 @@ adsApp.factory('townsData', ['$resource', function($resource){
     return{
         getTowns: getAllTowns
     }
-
 }])

@@ -10,10 +10,16 @@ adsApp.factory('signing', ['$resource', function($resource){
         localStorage.setItem('access_token', data.access_token);
         localStorage.setItem('username', data.username);
     }
+    function isAuthenticated()
+    {
+        if(localStorage.getItem('access_token')) return true;
+        return false;
+    }
     return{
         register: registerUser,
         login: loginUser,
-        authenticate: authenticate
+        authenticate: authenticate,
+        isAuthenticated: isAuthenticated
     }
 
 }])

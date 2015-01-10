@@ -1,9 +1,9 @@
-adsApp.controller('PrivateAdsCtrl', ['$scope','$resource', 'adsData', function($scope, $resource, adsData){
+adsApp.controller('PrivateAdsCtrl', ['$scope','$resource', 'signing', 'adsData', function($scope, $resource, signing, adsData){
     adsData.getPrivateAds()
         .$promise
         .then(function(data)
         {
             $scope.privateAds = data;
-            console.log(data);
         });
+    $scope.isAuthenticated = signing.isAuthenticated;
 }])
