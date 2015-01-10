@@ -4,5 +4,4 @@ adsApp.directive('privateAds', function(){
         templateUrl: 'partials/privateAds.html',
         controller: 'PrivateAdsCtrl'
     }
-
 })

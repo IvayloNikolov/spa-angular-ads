@@ -6,7 +6,8 @@
             </left-sidebar>
         </div>
         <div class="col-xs-6">
-            <public-ads></public-ads>
+            <public-ads ng-hide="isAuthenticated"></public-ads>
+            <private-ads></private-ads>
         </div>
         <div class="col-xs-3">
             <right-sidebar></right-sidebar>

@@ -1,3 +1,48 @@
-<ul>
-    <li ng-repeat="myAd in myAds">{{myAd}}</li>
-</ul>
+<div ng-repeat="myAd in privateAds.ads" class = "ad clearfix">
+    <div class="content-with-picture">
+        <div class="imgData">
+            <img data-ng-src={{myAd.imageDataUrl}}>
+        </div>
+    </div>
+    <div class="content-without-picture">
+        <div class="title">{{myAd.title}}</div>
+        <div class="wholeInfo">
+        <span class="text" style="font-weight: bold">Text:</span>
+        <span class="info">{{myAd.text}}</span>
+        </div>
+        <div class="whole-category-name">
+        <span class="category-name-text" style="font-weight:bold">Category Name:</span>
+        <span class=category-name">{{myAd.categoryName}}</span>
+        </div>
+        <div class="whole-category-status">
+            <span class="category-name-status" style="font-weight:bold">Category Status:</span>
+            <span class=category-status">{{myAd.status}}</span>
+        </div>
+    </div>
+</div>
+<!--<div ng-repeat="ad in ads" class="ad clearfix">-->
+    <!--<div class="content-with-picture">-->
+        <!--<div class="imgData">-->
+            <!--<img data-ng-src={{ad.imageDataUrl}}>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="content-without-picture">-->
+        <!--<div class="title">{{ad.title}}</div>-->
+        <!--<div class="wholeInfo">-->
+            <!--<span class="text" style="font-weight: bold">Text:</span>-->
+            <!--<span class="info">{{ad.text}}</span>-->
+        <!--</div>-->
+        <!--<div class="whole-owner-Name">-->
+            <!--<span class="owner-name-text" style="font-weight:bold">Owner:</span>-->
+            <!--<span class=owner-name">{{ad.ownerName}}</span>-->
+        <!--</div>-->
+        <!--<div class="whole-owner-phone">-->
+            <!--<span class="owner-phone-text" style="font-weight:bold">Owner Phone:</span>-->
+            <!--<span class="owner-phone">{{ad.ownerPhone}}</span>-->
+        <!--</div>-->
+        <!--<div class="whole-town-id">-->
+            <!--<span class="owner-phone-text" style="font-weight:bold">Town:</span>-->
+            <!--<span class="town-id">{{ad.townId}}</span>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
