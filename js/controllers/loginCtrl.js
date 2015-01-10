@@ -6,7 +6,6 @@ adsApp.controller('loginCtrl', ['$scope', 'signing', '$location', function($scop
             .then(function(data)
             {
                 signing.authenticate(data);
-                $scope.isAuthenticated = true;
                 $location.path('/');
 
             })
