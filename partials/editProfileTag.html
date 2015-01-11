@@ -18,12 +18,16 @@
     <button ng-click="update(user)">Update</button>
 </div>
     <div class="edit-profile col-xs-4 col-xs-offset-1">
-        <label for="pass">Pass</label>
+        <label for="oldPass">Old Pass</label>
         <br />
-        <input type="password" id="pass" ng-model="user2.pass">
+        <input type="password" id="oldPass" ng-model="user2.oldPassword">
+        <br/>
+        <label for="newPass">New Pass</label>
         <br />
-        <label for="pass" ng-mode="user2.pas2">Confirm</label>
+        <input type="password" id="newPass" ng-model="user2.newPassword">
         <br />
-        <input type="password" id="confirm-pass">
-        <button ng-click="changePass()">Change Pass</button>
+        <label for="confirmPass" >Confirm</label>
+        <br />
+        <input type="password" id="confirmPass" ng-model="user2.confirmPassword">
+        <button ng-click="changePass(user2)">Change Pass</button>
     </div>

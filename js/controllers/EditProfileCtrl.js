@@ -11,4 +11,9 @@ adsApp.controller('EditProfileCtrl', ['$scope', 'townsData','userDataService', '
         if(!(user.townId)) user.townId = $scope.user.townId;
         editProfile.editUser(user);
     }
+    $scope.changePass = function(user)
+    {
+        editProfile.changePass(user);
+    }
+
 }])

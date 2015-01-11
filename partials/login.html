@@ -1,13 +1,18 @@
-<div id="login">
-    <form>
-        {{page}}
-        <br />
-        <a href="#register">register</a>
-        <a href="/">home</a>
-        <br />
-        <input type="username" ng-model="user.username">
-        <br />
-        <input type="password" ng-model="user.password">
-        <button ng-click="login(user)">Submit</button>
-    </form>
+<div class="container">
+    <div class="col-xs-2 col-xs-offset-1">
+        <user-profile ng-show="isAuthenticated"></user-profile>
+        <navigation  ng-hide="isAuthenticated"></navigation>
+    </div>
+    <div class="col-xs-6">
+        <div class="edit-profile">
+            <form>
+                {{page}}
+                <br />
+                <input type="username" ng-model="user.username">
+                <br />
+                <input type="password" ng-model="user.password">
+                <button ng-click="login(user)">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>

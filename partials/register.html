@@ -1,32 +1,44 @@
-<div id="register">
-<form>
-        {{page}}
+<div class="container">
+    <div class="col-xs-2 col-xs-offset-1">
+        <user-profile ng-show="isAuthenticated"></user-profile>
+        <navigation  ng-hide="isAuthenticated"></navigation>
+    </div>
+    <div id="register" class="col-xs-6">
         <a href="#login">Login</a>
         <a href="#/">home</a>
         <br />
         <label for="username">Username:</label>
+        <br />
         <input type="text" id="username" ng-model="user.username">
         <br />
         <label for="password">Password:</label>
+         <br />
         <input type="password" id="password" ng-model="user.password">
         <br />
         <label for="confirmPassword">Confirm</label>
+        <br />
         <input type="text" id="confirmPassword" ng-model="user.confirmPassword">
         <br />
         <label for="name">Name:</label>
+        <br />
         <input type="text" id="name" ng-model="user.name">
         <br />
         <label for="email">Email</label>
+        <br />
         <input type="email" id="email" ng-model="user.email">
         <br />
         <label for="phone">Phone</label>
+        <br />
         <input type="text" id="phone" ng-model="user.phone">
         <br />
         <label for="town">Town</label>
+        <br />
         <select ng-model="user.town" id="town">
             <option ng-repeat="town in towns" >{{town.name}}</option>
         </select>
+        <br />
         <button ng-click="register(user)">Register</button>
+        <br />
         <a href="#login">Login here</a>
-    </form>
+    </div>
 </div>

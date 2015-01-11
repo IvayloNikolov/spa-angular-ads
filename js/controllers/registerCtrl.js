@@ -1,5 +1,5 @@
 adsApp.controller('registerCtrl', ['$scope', 'townsData', 'signing', '$location', function($scope, townsData, signing, $location){
-    townsData.getTowns
+    townsData.getTowns()
         .$promise
         .then(function(data)
         {

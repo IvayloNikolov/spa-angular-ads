@@ -31,7 +31,8 @@ adsApp.factory('signing', ['$resource', '$location', function($resource, $locati
             .$promise
             .then(function()
             {
-                console.log('success');
+                localStorage.clear();
+                $location.path('/')
             });
     }
 
