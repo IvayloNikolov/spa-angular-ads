@@ -6,4 +6,5 @@ adsApp.controller('PrivateAdsCtrl', ['$scope','$resource', 'signing', 'adsData',
             $scope.privateAds = data;
         });
     $scope.isAuthenticated = signing.isAuthenticated;
+
 }])

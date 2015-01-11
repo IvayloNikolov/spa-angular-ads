@@ -1,6 +1,16 @@
 <div id="post-ad">
     <h2>Publish new ad</h2>
-    <input type="text">
+    <input type="text" ng-model="ad.title">
     <br />
-    <textarea style="margin-left:10px;"></textarea>
+    <textarea style="margin-left:10px;" ng-model="ad.text"></textarea>
+    <br />
+    <select>
+        <option ng-repeat="category in categories" ng-model="ad.categoryById">{{category.name}}</option>
+    </select>
+    <br />
+    <select>
+        <option ng-repeat="town in towns" ng-model="ad.townById">{{town.name}}</option>
+    </select>
+    <br />
+    <button ng-click="postAd(ad)">Submit</button>
 </div>

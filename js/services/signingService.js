@@ -8,7 +8,6 @@ adsApp.factory('signing', ['$resource', function($resource){
     function authenticate(data)
     {
         localStorage.setItem('access_token', data.access_token);
-        localStorage.setItem('username', data.username);
     }
     function isAuthenticated()
     {

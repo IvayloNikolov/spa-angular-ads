@@ -1,0 +1,22 @@
+<div class="edit-profile col-xs-4">
+    <label for="name" >Name: </label>
+    <br />
+    <input type="text" id="name" ng-model="user.name">
+    <br />
+    <label for="name">Email: </label>
+    <br />
+    <input type="email" ng-model="user.email">
+    <br />
+    <input type="text" ng-model="user.phoneNumber">
+    <br />
+    <label for="town">Town:</label>
+    <br />
+    <select>
+        <option ng-repeat="town in towns" id="town" ng-model="user.townId">{{town.name}}</option>
+    </select>
+    <br />
+    <button ng-click="update(user)">Update</button>
+</div>
+<div class="edit-profile col-xs-4 col-xs-offset-1">
+sadsa
+</div>

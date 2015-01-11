@@ -28,4 +28,13 @@ adsApp.config(['$routeProvider', function($routeProvider) {
         controller: 'PostAdCtrl',
         replace: true
     })
+    $routeProvider.when('/editProfile', {
+        templateUrl: 'partials/editProfile.html',
+        controller: 'EditProfileCtrl',
+        replace: true
+    })
+    $routeProvider.when('/edit/:phoneId', {
+        templateUrl: 'partials/editAd',
+        controller: 'EditAdCtrl'
+    })
 }])
