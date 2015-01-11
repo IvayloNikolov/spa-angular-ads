@@ -9,8 +9,19 @@ adsApp.factory('userDataService', ['$resource', function($resource){
             }
         }).get();
     }
+    function editUserInfo(){
+        return $resource('http://localhost:1337/api/user/profile', {}, {
+            put: {
+                method: 'PUT',
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.access_token
+                }
+            }
+        }).put();
+    }
 
     return{
-        getUserInfo: getUserInfo
+        getUserInfo: getUserInfo,
+        editUserInfo: editUserInfo
     }
 }])

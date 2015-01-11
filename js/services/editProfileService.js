@@ -9,6 +9,7 @@ adsApp.factory('editProfile', ['$resource', function($resource){
                 }
             }
         }).put(data);
+
     }
     return{
         editUser: edit
