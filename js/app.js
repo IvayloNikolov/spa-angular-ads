@@ -46,4 +46,16 @@ adsApp.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'partials/deleteAd.html',
         controller: 'DeleteAdCtrl'
     })
+    $routeProvider.when('/view/:pageId/:adsNumber', {
+        templateUrl: 'partials/home.html',
+        controller: 'homeCtrl'
+    })
 }])
+adsApp.filter('range', function() {
+    return function(input, total) {
+        total = parseInt(total);
+        for (var i=0; i<total; i++)
+            input.push(i);
+        return input;
+    };
+});

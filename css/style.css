@@ -70,3 +70,11 @@ body
     border: 1px solid #507e32;
     text-align:center;
 }
+.pagination
+{
+    width:25px;
+    height:25px;
+    background:#efefef;
+    border:1px solid #000;
+    text-align:center;
+}

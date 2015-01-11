@@ -1,8 +1,13 @@
 adsApp.factory('adsData', ['$resource', function($resource){
-    var resource = $resource('http://localhost:1337/api/ads/');
-    function getAllAds()
+    function getAllAds(numberOfAds,Page)
     {
+        var resource = $resource('http://localhost:1337/api/ads?StartPage='+numberOfAds+'&PageSize='+Page);
         return resource.get();
+    }
+    function getPossiblePages(numberOfAds,Page)
+    {
+        var resource = $resource('http://localhost:1337/api/ads?StartPage='+numberOfAds+'&PageSize='+Page);
+        return resource.get().numPages;
     }
     var resource2 = $resource('http://localhost:1337/api/user/ads/', {}, {
         get: {
@@ -18,6 +23,7 @@ adsApp.factory('adsData', ['$resource', function($resource){
     }
     return{
         getAds: getAllAds,
-        getPrivateAds: getPrivateAds
+        getPrivateAds: getPrivateAds,
+        getPossiblPages: getPossiblePages
     }
 }])

@@ -2,13 +2,6 @@ adsApp.controller('loginCtrl', ['$scope', 'signing', '$location', function($scop
     $scope.login = function(user)
     {
         signing.login(user)
-            .$promise
-            .then(function(data)
-            {
-                signing.authenticate(data);
-                $location.path('/');
-
-            })
     }
     $scope.page = 'Login'
 }])
