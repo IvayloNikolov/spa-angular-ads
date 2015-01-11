@@ -23,11 +23,35 @@ adsApp.factory('adService', ['$resource', function($resource){
                     }
                 }
             })
-                .put(data);
+                .put(data)
+                .$promise
+                .then(function (data) {
+                    n.success();
+                    },function(error){
+                    n.error()
+                    });
         }
-
+        function deleteById(id)
+        {
+            return $resource('http://localhost:1337/api/user/ads/' + id, {}, {
+                delete: {
+                    method: 'delete',
+                    headers: {
+                        'Authorization': 'Bearer ' + localStorage.access_token
+                    }
+                }
+            })
+                .delete()
+                .$promise
+                .then(function (data) {
+                    n.success();
+                },function(error){
+                    n.error()
+                });
+        }
     return {
         getAdById: getAdById,
-        editById: editById
+        editById: editById,
+        deleteById: deleteById
     }
 }])

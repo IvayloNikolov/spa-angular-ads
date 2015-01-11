@@ -1,0 +1,12 @@
+    <div class="container">
+            <div class="col-xs-2 col-xs-offset-1">
+                <user-profile ng-show="isAuthenticated"></user-profile>
+                <navigation  ng-hide="isAuthenticated"></navigation>
+            </div>
+            <div class="col-xs-6">
+                <delete-ad></delete-ad>
+            </div>
+            <div class="col-xs-2 col-xs-offset-1">
+                <right-sidebar></right-sidebar>
+            </div>
+    </div>

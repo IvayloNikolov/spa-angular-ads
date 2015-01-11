@@ -28,6 +28,11 @@ adsApp.config(['$routeProvider', function($routeProvider) {
         controller: 'PostAdCtrl',
         replace: true
     })
+    $routeProvider.when('/logOut',{
+        templateUrl:"partials/logOut.html",
+        controller: 'LogOutCtrl',
+        replace: true
+    })
     $routeProvider.when('/editProfile', {
         templateUrl: 'partials/editProfile.html',
         controller: 'EditProfileCtrl',
@@ -36,5 +41,9 @@ adsApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/edit/:id', {
         templateUrl: 'partials/editAd.html',
         controller: 'EditAdCtrl'
+    })
+    $routeProvider.when('/delete/:id', {
+        templateUrl: 'partials/deleteAd.html',
+        controller: 'DeleteAdCtrl'
     })
 }])

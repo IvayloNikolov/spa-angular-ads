@@ -8,7 +8,14 @@ adsApp.factory('editProfile', ['$resource', function($resource){
                     'Authorization': 'Bearer ' + localStorage.access_token
                 }
             }
-        }).put(data);
+        }).put(data)
+            .$promise
+            .then( function(){
+                n.success();
+            }, function(){
+                n.error();
+            }
+        );
 
     }
     return{

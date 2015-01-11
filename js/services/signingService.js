@@ -1,9 +1,21 @@
 adsApp.factory('signing', ['$resource', function($resource){
     function registerUser(user){
-        return $resource('http://localhost:1337/api/user/register').save(user);
+        return $resource('http://localhost:1337/api/user/register').save(user)
+            .$promise
+            .then(function (data) {
+                n.success();
+            },function(error){
+                n.error()
+            });;
     }
     function loginUser(user){
-        return $resource('http://localhost:1337/api/user/login').save(user);
+        return $resource('http://localhost:1337/api/user/login').save(user)
+            .$promise
+            .then(function (data) {
+                n.success();
+            },function(error){
+                n.error()
+            });;
     }
     function authenticate(data)
     {
